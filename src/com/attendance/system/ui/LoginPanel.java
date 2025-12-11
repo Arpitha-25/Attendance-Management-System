@@ -33,10 +33,11 @@ public class LoginPanel extends JPanel {
         ));
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
 
-        JLabel lblIcon = new JLabel("\u25CF", SwingConstants.CENTER);
+        ImageIcon appIcon = new ImageIcon("resources/icons/app_icon.jpg");
+        Image scaled = appIcon.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+        JLabel lblIcon = new JLabel(new ImageIcon(scaled));
         lblIcon.setAlignmentX(Component.CENTER_ALIGNMENT);
-        lblIcon.setForeground(new Color(0x4F46E5));
-        lblIcon.setFont(lblIcon.getFont().deriveFont(Font.BOLD, 26f));
+
 
         JLabel lblTitle = new JLabel("CampusAttend", SwingConstants.CENTER);
         lblTitle.setAlignmentX(Component.CENTER_ALIGNMENT);
